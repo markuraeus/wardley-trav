@@ -1,0 +1,50 @@
+title Tailormade Sales - Step 4 - Enchanting Travels
+anchor Customer [0.95, 0.54]
+component Agent [0.83, 0.66]
+component CallCentre [0.77, 0.78]
+component Compute [0.26, 0.75] label [17, 3]
+#component Database [0.36, 0.75] label [-84, 4]
+component DataCentre [0.19, 0.77] label [11, -2]
+component Desktop [0.48, 0.69] label [-32, 25] 
+component eMail [0.9, 0.70] label [12, 8]
+component LMT/CRM [0.66, 0.75] label [9, 3]
+
+component Network [0.11, 0.60] label [-69, 6]
+component Power [0.07, 0.85]
+component SellingSystems [0.62, 0.70] label [10, 7]
+
+component Telephone [0.90, 0.81]
+component Website [0.90, 0.57] label [-67, 5]
+Agent->CallCentre
+Agent->SellingSystems
+Agent->LMT/CRM
+Agent->Desktop
+CallCentre->LMT/CRM
+Customer->eMail
+Customer->Telephone
+Customer->Website
+Compute->DataCentre
+Compute->Network
+eMail->LMT/CRM
+DataCentre->Power
+DataCentre->Network
+Desktop->Compute
+LMT/CRM->SellingSystems
+Network->Power
+Outlook->MSAD
+SellingSystems->Compute
+Telephone->CallCentre
+Website->SellingSystems
+
+#annotation 1 [[0.45,0.54],[0.53,0.76] ] Switch O365 for GoogleSuite
+#annotation 2 [0.58, 0.55] Remove Office from Agents
+#annotation 3 [0.46, 0.25] Adopt mainline Travelink
+annotations [0.08, 0.01]
+
+#note +assume HubSpot for Complaints [0.68, 0.77]
+#note +adopt Mainline Product [0.57, 0.38]
+#note +AzureAD [0.44, 0.85]
+#note +Google for O365 [0.55, 0.79]
+#note +TalkDesk for Avaya [0.76, 0.79]
+
+style wardley
